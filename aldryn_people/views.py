@@ -110,4 +110,5 @@ class GroupListView(ListView):
         qs_ungrouped = Person.objects.filter(groups__isnull=True)
         context['ungrouped_people'] = qs_ungrouped.translated(
             *self.valid_languages)
+        context['foo'] = 'hooray!'
         return context
