@@ -221,6 +221,8 @@ class Person(TranslationHelperMixin, TranslatedAutoSlugifyMixin,
 
     content = PlaceholderField('person_detail_content', related_name='person_detail_content')
 
+    banana = models.CharField(verbose_name='banana', null=True, blank=True, max_length=100)
+
     class Meta:
         verbose_name = _('Person')
         verbose_name_plural = _('People')
